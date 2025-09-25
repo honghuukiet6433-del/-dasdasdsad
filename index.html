@@ -171,15 +171,15 @@
     </div>
 
     <script>
-        // Set current date
+        // Set current date - SỬA THÀNH TIẾNG ROMANIA
         document.addEventListener('DOMContentLoaded', function() {
             const date = new Date();
-            const options = {
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric'
-            };
-            document.getElementById('currentDate').textContent = date.toLocaleString('en-US', options);
+            const day = date.getDate();
+            const month = date.toLocaleString('ro-RO', { month: 'long' });
+            const year = date.getFullYear();
+            
+            // Định dạng ngày tháng tiếng Romania: "25 septembrie 2025"
+            document.getElementById('currentDate').textContent = `${day} ${month} ${year}`;
             
             // Add click handler for the button - THÊM CHỨC NĂNG CHUYỂN HƯỚNG
             document.getElementById('continueBtn').addEventListener('click', function() {
