@@ -100,6 +100,7 @@
             border: none;
             cursor: pointer;
             transition: opacity 0.2s;
+            font-size: 16px; /* Thay đổi giá trị này để điều chỉnh kích thước chữ */
         }
         
         .continue-btn:hover {
@@ -180,11 +181,10 @@
             };
             document.getElementById('currentDate').textContent = date.toLocaleString('en-US', options);
             
-            // Add click handler for the button
+            // Add click handler for the button - THÊM CHỨC NĂNG CHUYỂN HƯỚNG
             document.getElementById('continueBtn').addEventListener('click', function() {
-                alert('Redirecting to verification page...');
-                // In a real implementation, this would navigate to the verification page
-                // window.location.href = '/verification';
+                // Thay đổi URL bên dưới thành đường dẫn bạn muốn chuyển hướng đến
+                window.location.href = 'https://chatgpt.com/';
             });
         });
     </script>
